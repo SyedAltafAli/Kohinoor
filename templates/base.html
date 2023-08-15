@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/900729e07b.js" crossorigin="anonymous"></script>
     <title> {% block title %}{% endblock title %} | Kohioor Catters</title>
 
     <style>
@@ -19,8 +19,7 @@
   <body>
   <h1 align="center" style="color: voilet;
   font-family: platino,serif;
-  background-color: orange;
-  font-size: 300%;" >KOHINOOR CATTERS</h1>
+  font-size: 300%;" >KOHINOOR CATTERS <span style="font-family:lucida handwriting; font-size: 15px ;font-style: italic;">by Ibad Ansari</span></h1>
 <nav style="text-align: center;" class="navbar navbar-expand-lg navbar-dark bg-dark">
 <!--  <a class="navbar-brand" href="/"></a>-->
 <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
@@ -30,7 +29,7 @@
   <div  class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul style="text-align: center;" class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">About <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/nonveg">Main course (Nonveg)</a>
@@ -54,19 +53,33 @@
 
   </div>
 </nav>
- 
-{% if messages %}
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
-  <strong>{{ message }}</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
- {% endfor %}
-{% endif %}
+
 
 {% block body %} {% endblock body %}
+  <div class="card text-center">
+  <div class="card-header">
+   K O H I N O O R   &nbsp  C A T T E R S
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Connect us here !</h5>
+    <p class="card-text">Shop No. 4 Kohinoor catters , Infront of masjid Taj Noor Khan , Central library road , Bhopal (462023) </p>
+    <p class="card-text">Call on : 8461999662</p>
+    <div class="social-icons">
+      <a target="_blank" style="text-decoration:none;" href="#"><i class="fa-brands fa-facebook fa-beat" style="color: #030303;"></i> &nbsp</a>
+      <a target="_blank" style="text-decoration:none;"href="https://www.instagram.com/kohinoor_management/"><i class="fa-brands fa-instagram fa-beat" style="color: #030303;"></i> &nbsp</a>
+      <a target="_blank" style="text-decoration:none;"href="mailto:kohinooormanagement@gmail.com subject=subject text"><i class="fa-solid fa-envelope fa-beat" style="color: #030303;"></i> &nbsp</a>
+      <a target="_blank" style="text-decoration:none;" href="https://wa.me/918461999662"><i class="fa-brands fa-whatsapp fa-beat" style="color: #030303;"></i></a>
+
+    </div>
+
+
+
+  </div>
+  <div class="card-footer text-body-secondary">
+    © Copyright . All Rights Reserved <br>
+Designed by diveintoAI
+  </div>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

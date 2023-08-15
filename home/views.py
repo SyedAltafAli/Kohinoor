@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from home.models import Contact
 from django.contrib import messages
+from .models import dishes
+from math import ceil
 
 # Create your views here.
 def index(request):
@@ -15,18 +17,68 @@ def index(request):
 def about(request):
     return render(request, 'about.html') 
 
-def mens(request):
-    return render(request, 'mens.html')
+def nonveg(request):
+    return render(request, 'nonveg.html')
  
-def womens(request):
-    return render(request, 'womens.html')
+def veg(request):
+    return render(request, 'veg.html')
 
-def kids(request):
-    return render(request, 'kids.html')
+def starters(request):
+    prod = dishes.objects.filter(category="starters")
+    params = {'dishes': prod,'cat':''}
+    return render(request, 'last.html', params)
 
-def tech(request):
-    return render(request, 'tech.html')
+def desserts(request):
+    return render(request, 'desserts.html')
+def bevrages(request):
+    prod = dishes.objects.filter(category="bevrages")
+    params = {'dishes': prod, 'cat':''}
+    return render(request, 'last.html', params)
 
+def chinese(request):
+    return render(request, 'chinese.html')
+
+def chicken(request):
+    prod = dishes.objects.filter(category="chicken")
+    params = {'dishes': prod, 'cat': 'nonveg'}
+    return render(request, 'last.html',params)
+
+def mutton(request):
+    prod = dishes.objects.filter(category="mutton")
+    params = {'dishes': prod, 'cat': 'nonveg'}
+    return render(request, 'last.html',params)
+
+def beaf(request):
+    prod = dishes.objects.filter(category="beaf")
+    params = {'dishes': prod, 'cat': 'nonveg'}
+    return render(request, 'last.html',params)
+
+def paneer(request):
+    prod = dishes.objects.filter(category="paneer")
+    params = {'dishes': prod, 'cat': 'veg'}
+    return render(request, 'last.html',params)
+
+def veggies(request):
+    prod = dishes.objects.filter(category="veggies")
+    params = {'dishes': prod, 'cat': 'veg'}
+    return render(request, 'last.html',params)
+
+def others(request):
+    prod = dishes.objects.filter(category="others")
+    params = {'dishes': prod , 'cat': 'veg'}
+    return render(request, 'last.html',params)
+def icecream(request):
+    prod = dishes.objects.filter(category="icecream")
+    params = {'dishes': prod , 'cat': 'desserts'}
+    return render(request, 'last.html',params)
+def halwa(request):
+    prod = dishes.objects.filter(category="halwa")
+    params = {'dishes': prod , 'cat': 'desserts'}
+    return render(request, 'last.html',params)
+def special(request):
+    prod = dishes.objects.filter(category="special")
+    params = {'dishes': prod , 'cat': 'desserts'}
+    return render(request, 'last.html',params)
 
 def contact(request):
     if request.method == "POST":
