@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CSRF_TRUSTED_ORIGINS = [
-    'https://kohinoor-production.up.railway.app'
+    'https://kohinoorcatters.up.railway.app'
 ]
 ROOT_URLCONF = 'Hello.urls'
 
